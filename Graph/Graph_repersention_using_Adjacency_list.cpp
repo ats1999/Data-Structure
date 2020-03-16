@@ -30,18 +30,27 @@ class Graph{
 	// method to print the list
 	void print(){
 		for(int i=0;i<v;i++){
-			for(int node:list[i]){
-				cout<<node<<" ";
+			cout<<i<<"->";
+			for(int node:adjList[i]){
+				cout<<node<<"->";
 			}
 			cout<<endl;
 		}
+	}
+	// bfs traversal
+	void bfs(int src){
+		
 	}
 };
 int main(){
 	Graph g(4);
 	g.addEdge(0,1);
 	g.addEdge(0,2);
+	g.addEdge(0,3);
+	g.addEdge(1,2);
 	g.addEdge(1,3);
+	g.addEdge(2,1);
+	g.addEdge(3,2);
 	g.print();
 	
 	return 0;
